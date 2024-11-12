@@ -19,10 +19,23 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["src/app/*"],
+      "~components/*": ["src/app/components/*"],
+      "~configs/*": ["src/app/configs/*"],
+      "~constants/*": ["src/app/constants/*"],
+      "~directives/*": ["src/app/directives/*"],
+      "~guards/*": ["src/app/guards/*"],
+      "~interceptors/*": ["src/app/interceptors/*"],
+      "~models/*": ["src/app/models/*"],
+      "~pipes/*": ["src/app/pipes/*"],
+      "~services/*": ["src/app/services/*"],
+      "~utils/*": ["src/app/utils/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
