@@ -1,0 +1,14 @@
+@use '../../common.scss';
+::ng-deep app-adding-dragging-functionality {
+  @include common.connection;
+}
+f-flow {
+  height: 300px;
+}
+.f-node {
+  @include common.node;
+}
+.f-node {
+  cursor: default;
+}
+@include common.connectors;

@@ -1,0 +1,8 @@
+@use '../../common.scss';
+::ng-deep app-node-with-position {
+  @include common.connection;
+}
+.f-node {
+  @include common.node;
+  cursor: default;
+}
