@@ -15,16 +15,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'course-platform-fe' title`, () => {
+  it(`should have the 'foblex-flow-test' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('course-platform-fe');
+    expect(app.title).toEqual('foblex-flow-test');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, course-platform-fe');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, foblex-flow-test');
   });
 });

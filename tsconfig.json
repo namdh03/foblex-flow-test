@@ -34,6 +34,7 @@
       "~models/*": ["src/app/models/*"],
       "~pipes/*": ["src/app/pipes/*"],
       "~services/*": ["src/app/services/*"],
+      "~styles/*": ["src/app/styles/*"],
       "~utils/*": ["src/app/utils/*"]
     }
   },
