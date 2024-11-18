@@ -1,0 +1,21 @@
+@use '../../common';
+::ng-deep app-f-flow-examples {
+  @include common.connection;
+}
+f-flow {
+  height: 300px;
+}
+.f-node {
+  @include common.node;
+}
+.f-node {
+  cursor: default;
+}
+.f-flow {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+.f-canvas {
+  background-color: #ffffff;
+  border: 1px dashed #ccc;
+}

@@ -8,6 +8,7 @@ import { CustomConnectionTypeComponent } from '~examples/custom-connection-type/
 import { DifferentConnectableSideComponent } from '~examples/different-connectable-side/different-connectable-side.component';
 import { DifferentConnectionBehavioursComponent } from '~examples/different-connection-behaviours/different-connection-behaviours.component';
 import { DifferentConnectionTypesComponent } from '~examples/different-connection-types/different-connection-types.component';
+import { FFlowExamplesComponent } from '~examples/f-flow-examples/f-flow-examples.component';
 import { GettingStartedComponent } from '~examples/getting-started/getting-started.component';
 import { NodeWithConnectorsComponent } from '~examples/node-with-connectors/node-with-connectors.component';
 import { NodeWithDragHandleComponent } from '~examples/node-with-drag-handle/node-with-drag-handle.component';
@@ -31,6 +32,7 @@ import { ReassignConnectionComponent } from '~examples/reassign-connection/reass
     DifferentConnectionBehavioursComponent,
     CustomConnectionTypeComponent,
     ReassignConnectionComponent,
+    FFlowExamplesComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

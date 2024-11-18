@@ -1,0 +1,73 @@
+<p>f-flow-examples works!</p>
+
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+  <button (click)="onSelectAll()">Select All</button>
+  <button (click)="onClearSelection()">Clear Selection</button>
+  <button (click)="onFlowRedraw()">Redraw</button>
+</div>
+
+<hr />
+
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+  <button (click)="onFitToScreen()">Fit To Screen</button>
+  <button (click)="onResetScaleAndCenter()">Reset Scale And Center</button>
+  <button (click)="onCenterNode2()">Center Node 2</button>
+  <button (click)="onSetZoom()">Set Zoom</button>
+  <button (click)="onResetZoom()">Reset Zoom</button>
+</div>
+
+<hr />
+
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+  <button (click)="onSetNewSizeNode1()">Set New Size For Node 1</button>
+</div>
+
+<f-flow fDraggable [fFlowId]="'customFlowId'" (fLoaded)="onFlowLoaded()">
+  <f-canvas (fCanvasChange)="onCanvasChanged($event)">
+    <f-connection fOutputId="output1" fInputId="input1"></f-connection>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 24, y: 24 }"
+      fNodeOutput
+      fOutputId="output1"
+      fOutputConnectableSide="right"
+      [fNodeSize]="node1Size"
+      (fNodePositionChange)="onPositionChanged($event)"
+      (fNodeSizeChange)="onSizeChanged($event)"
+    >
+      Node 1
+    </div>
+    <div
+      fNode
+      fNodeId="node-2"
+      fDragHandle
+      [fNodePosition]="{ x: 244, y: 24 }"
+      fNodeInput
+      fInputId="input1"
+      fInputConnectableSide="left"
+      [fNodeDraggingDisabled]="true"
+      [fNodeSelectionDisabled]="true"
+    >
+      Node 2
+    </div>
+
+    <div fNode [fNodePosition]="{ x: 182, y: 97 }">
+      <div fDragHandle>Drag me</div>
+    </div>
+
+    <div fNode [fNodePosition]="{ x: 345, y: 124 }">
+      <div class="drag-container">
+        <div fDragHandle class="handle">Drag from here</div>
+      </div>
+      <hr />
+      <div>Node Content</div>
+    </div>
+
+    <div fNode [fNodePosition]="{ x: 488, y: 30 }">
+      <div>Node Content</div>
+      <hr />
+      <div fDragHandle class="external-handle">Drag me</div>
+    </div>
+  </f-canvas>
+</f-flow>
