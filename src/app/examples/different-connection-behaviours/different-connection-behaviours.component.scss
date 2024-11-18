@@ -1,0 +1,10 @@
+@use '../../common';
+::ng-deep app-different-connection-behaviours {
+  @include common.connection;
+}
+.f-node {
+  @include common.node;
+}
+.f-node {
+  opacity: 0.5;
+}

@@ -1,0 +1,12 @@
+@use './common';
+::ng-deep app-reassign-connection {
+  @include common.connection;
+  .f-connection {
+    .f-connection-drag-handle {
+      fill: var(--connection-color);
+    }
+  }
+}
+.f-node {
+  @include common.node;
+}

@@ -1,0 +1,8 @@
+@use '../../common.scss';
+::ng-deep app-node-with-connectors {
+  @include common.connection;
+}
+.f-node {
+  @include common.node;
+}
+@include common.connectors;

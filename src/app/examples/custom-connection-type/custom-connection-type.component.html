@@ -1,0 +1,148 @@
+<p>custom-connection-type works!</p>
+
+<f-flow fDraggable>
+  <f-canvas>
+    <f-connection
+      fText="offset_straight"
+      [fReassignDisabled]="true"
+      fType="offset_straight"
+      fOutputId="output1"
+      fInputId="input1"
+    ></f-connection>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 24, y: 24 }"
+      fNodeOutput
+      fOutputId="output1"
+      fOutputConnectableSide="right"
+    >
+      drag me
+    </div>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 144, y: 140 }"
+      fNodeInput
+      fInputId="input1"
+      fInputConnectableSide="left"
+    >
+      drag me
+    </div>
+
+    <f-connection
+      fText="circle"
+      [fReassignDisabled]="true"
+      fType="circle"
+      fOutputId="output2"
+      fInputId="input2"
+    ></f-connection>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 244, y: 24 }"
+      fNodeOutput
+      fOutputId="output2"
+      fOutputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 468, y: 24 }"
+      fNodeInput
+      fInputId="input2"
+      fInputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+
+    <f-connection
+      fText="curved_line"
+      [fReassignDisabled]="true"
+      fType="curved_line"
+      fOutputId="output3"
+      fInputId="input3"
+      [fBehavior]="eConnectionBehaviour.FLOATING"
+    ></f-connection>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 629, y: 22 }"
+      fNodeOutput
+      fOutputId="output3"
+      fOutputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 454, y: 254 }"
+      fNodeInput
+      fInputId="input3"
+      fInputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+
+    <f-connection
+      fText="zigzag"
+      [fReassignDisabled]="true"
+      fType="zigzag"
+      fOutputId="output4"
+      fInputId="input4"
+      [fBehavior]="eConnectionBehaviour.FLOATING"
+    ></f-connection>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 1019, y: 221 }"
+      fNodeOutput
+      fOutputId="output4"
+      fOutputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 782, y: 22 }"
+      fNodeInput
+      fInputId="input4"
+      fInputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+
+    <f-connection
+      fText="arrow"
+      [fReassignDisabled]="true"
+      fType="arrow"
+      fOutputId="output5"
+      fInputId="input5"
+      [fBehavior]="eConnectionBehaviour.FLOATING"
+    ></f-connection>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 1000, y: 22 }"
+      fNodeOutput
+      fOutputId="output5"
+      fOutputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 1300, y: 22 }"
+      fNodeInput
+      fInputId="input5"
+      fInputConnectableSide="bottom"
+    >
+      drag me
+    </div>
+  </f-canvas>
+</f-flow>
