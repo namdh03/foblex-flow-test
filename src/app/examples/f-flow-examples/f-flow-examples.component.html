@@ -22,8 +22,31 @@
   <button (click)="onSetNewSizeNode1()">Set New Size For Node 1</button>
 </div>
 
-<f-flow fDraggable [fFlowId]="'customFlowId'" (fLoaded)="onFlowLoaded()">
-  <f-canvas (fCanvasChange)="onCanvasChanged($event)">
+<hr />
+
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+  <button (click)="zoomIn()">Zoom In</button>
+  <button (click)="zoomOut()">Zoom Out</button>
+  <button (click)="reset()">Reset Zoom</button>
+</div>
+
+<f-flow
+  fDraggable
+  [fFlowId]="'customFlowId'"
+  (fLoaded)="onFlowLoaded()"
+  (fCreateConnection)="addConnection($event)"
+  (fReassignConnection)="resignConnection($event)"
+  (fCreateNode)="createNode($event)"
+>
+  <f-background>
+    <f-rect-pattern></f-rect-pattern>
+  </f-background>
+
+  <f-line-alignment [fAlignThreshold]="10"></f-line-alignment>
+
+  <f-minimap [fMinSize]="3000"></f-minimap>
+
+  <f-canvas fZoom (fCanvasChange)="onCanvasChanged($event)">
     <f-connection fOutputId="output1" fInputId="input1"></f-connection>
     <div
       fNode
@@ -69,5 +92,85 @@
       <hr />
       <div fDragHandle class="external-handle">Drag me</div>
     </div>
+
+    <!-- Outlet -->
+    <f-connection-for-create [fBehavior]="eConnectionBehaviour.FIXED">
+      <svg viewBox="0 0 10 10" fMarker [type]="eMarkerType.START" [height]="10" [width]="10" [refX]="5" [refY]="5">
+        <circle cx="5" cy="5" r="2" stroke="none" fill="var(--connection-gradient-1)"></circle>
+      </svg>
+      <svg viewBox="0 0 700 700" fMarker [type]="eMarkerType.END" [height]="5" [width]="5" [refX]="4" [refY]="2.5">
+        <path fill="var(--connection-gradient-2)" d="M0,0L700,350L0,700L150,350z" />
+      </svg>
+    </f-connection-for-create>
+    <f-snap-connection [fSnapThreshold]="50"></f-snap-connection>
+
+    @for (connection of connections; track connection.inputId) {
+      <f-connection
+        [fSelectionDisabled]="true"
+        [fBehavior]="eConnectionBehaviour.FIXED"
+        fType="bezier"
+        [fOutputId]="connection.outputId"
+        [fInputId]="connection.inputId"
+      >
+        <svg viewBox="0 0 10 10" fMarker [type]="eMarkerType.START" [height]="10" [width]="10" [refX]="5" [refY]="5">
+          <circle cx="5" cy="5" r="2" stroke="none" fill="var(--connection-gradient-1)"></circle>
+        </svg>
+        <svg viewBox="0 0 700 700" fMarker [type]="eMarkerType.END" [height]="5" [width]="5" [refX]="4" [refY]="2.5">
+          <path fill="var(--connection-gradient-2)" d="M0,0L700,350L0,700L150,350z" />
+        </svg>
+      </f-connection>
+    }
+
+    <div class="node-with-outlet" fNode fDragHandle [fNodePosition]="{ x: 712, y: 53 }">
+      <div class="node-line">
+        <div>Output 1</div>
+        <div fNodeOutput fOutputConnectableSide="right"></div>
+      </div>
+      <div class="node-line">
+        <div>Output 2</div>
+        <div fNodeOutput fOutputConnectableSide="right"></div>
+      </div>
+      <div class="node-line">
+        <div>Output 3</div>
+        <div fNodeOutput fOutputConnectableSide="right"></div>
+      </div>
+      <div class="node-line">
+        <div>Outlet. Drag me</div>
+        <div fNodeOutlet [isConnectionFromOutlet]="true"></div>
+      </div>
+    </div>
+
+    <div fNode fDragHandle [fNodePosition]="{ x: 1000, y: 40 }" fNodeInput fInputConnectableSide="left">to Me</div>
+    <div fNode fDragHandle [fNodePosition]="{ x: 1000, y: 100 }" fNodeInput fInputConnectableSide="left">to Me</div>
+    <div fNode fDragHandle [fNodePosition]="{ x: 1000, y: 160 }" fNodeInput fInputConnectableSide="left">to Me</div>
+
+    <div fNode fDragHandle [fNodePosition]="{ x: 1200, y: 100 }" fNodeOutput fOutputConnectableSide="bottom">
+      drag me
+    </div>
+    <div fNode fDragHandle [fNodePosition]="{ x: 1200, y: 250 }" fNodeInput fInputConnectableSide="top">to me</div>
+
+    <f-connection fOutputId="test-line-a-1" fInputId="test-line-a-2"></f-connection>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 82, y: 275 }"
+      fNodeOutput
+      fOutputId="test-line-a-1"
+      fOutputConnectableSide="right"
+    >
+      Drag me
+    </div>
+    <div
+      fNode
+      fDragHandle
+      [fNodePosition]="{ x: 345, y: 308 }"
+      fNodeInput
+      fInputId="test-line-a-2"
+      fInputConnectableSide="left"
+    >
+      Drag me
+    </div>
   </f-canvas>
 </f-flow>
+
+<div class="example-box" fExternalItem>Drag me around</div>

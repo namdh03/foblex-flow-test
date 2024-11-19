@@ -1,6 +1,17 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { IPoint, IRect, ISize } from '@foblex/2d';
-import { FCanvasChangeEvent, FCanvasComponent, FFlowComponent, FFlowModule } from '@foblex/flow';
+import {
+  EFConnectionBehavior,
+  EFMarkerType,
+  FCanvasChangeEvent,
+  FCanvasComponent,
+  FCreateConnectionEvent,
+  FCreateNodeEvent,
+  FFlowComponent,
+  FFlowModule,
+  FReassignConnectionEvent,
+  FZoomDirective,
+} from '@foblex/flow';
 
 @Component({
   selector: 'app-f-flow-examples',
@@ -15,10 +26,15 @@ export class FFlowExamplesComponent implements AfterViewInit {
   public fFlow!: FFlowComponent;
   @ViewChild(FCanvasComponent, { static: true })
   public fCanvas!: FCanvasComponent;
+  @ViewChild(FZoomDirective, { static: true })
+  public fZoomDirective!: FZoomDirective;
   public node1Size: ISize = {
     width: 100,
     height: 100,
   };
+  public connections: { outputId: string; inputId: string }[] = [];
+  public eConnectionBehaviour = EFConnectionBehavior;
+  protected readonly eMarkerType = EFMarkerType;
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {}
 
@@ -86,5 +102,36 @@ export class FFlowExamplesComponent implements AfterViewInit {
       height: 200,
     };
     this.changeDetectorRef.detectChanges();
+  }
+
+  // Add new connection
+  public addConnection(event: FCreateConnectionEvent): void {
+    if (!event.fInputId) {
+      return;
+    }
+    this.connections.push({ outputId: event.fOutputId, inputId: event.fInputId });
+    this.changeDetectorRef.detectChanges();
+  }
+
+  public resignConnection(event: FReassignConnectionEvent): void {
+    if (!event.newFInputId) {
+      return;
+    }
+    this.connections = [{ outputId: event.fOutputId, inputId: event.newFInputId }];
+    this.changeDetectorRef.detectChanges();
+  }
+
+  public createNode(event: FCreateNodeEvent) {
+    console.log(event);
+  }
+
+  public zoomIn(): void {
+    this.fZoomDirective.zoomIn();
+  }
+  public zoomOut(): void {
+    this.fZoomDirective.zoomOut();
+  }
+  public reset(): void {
+    this.fZoomDirective.reset();
   }
 }
