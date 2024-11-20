@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+
 import { FCanvasComponent, FFlowModule, FSelectionChangeEvent } from '@foblex/flow';
 
 @Component({

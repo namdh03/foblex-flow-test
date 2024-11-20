@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { FFlowModule, FSelectionChangeEvent } from '@foblex/flow';
 
 @Component({

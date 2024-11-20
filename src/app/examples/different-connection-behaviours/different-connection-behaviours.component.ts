@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { EFConnectionBehavior, FFlowModule } from '@foblex/flow';
 
 @Component({

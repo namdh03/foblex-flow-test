@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { IPoint, PointExtensions } from '@foblex/2d';
 import {
   EFConnectionBehavior,

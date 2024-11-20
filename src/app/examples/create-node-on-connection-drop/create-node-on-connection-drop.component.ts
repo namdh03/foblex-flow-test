@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+
 import { IPoint, PointExtensions } from '@foblex/2d';
 import {
   EFMarkerType,

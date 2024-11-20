@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+
 import { EFMarkerType, FCanvasComponent, FFlowModule } from '@foblex/flow';
 
 @Component({

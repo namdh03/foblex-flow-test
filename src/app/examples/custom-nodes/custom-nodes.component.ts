@@ -3,6 +3,7 @@ import { MatButton } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOption, MatSelect } from '@angular/material/select';
+
 import { PointExtensions } from '@foblex/2d';
 import { FCanvasChangeEvent, FCanvasComponent, FFlowModule } from '@foblex/flow';
 import { BrowserService } from '@foblex/platform';

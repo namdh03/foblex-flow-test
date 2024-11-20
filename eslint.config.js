@@ -57,7 +57,27 @@ module.exports = tseslint.config(
           endOfLine: 'auto',
         },
       ],
-      'simple-import-sort/imports': 'error',
+      'simple-import-sort/imports': [
+        'error',
+        {
+          groups: [
+            // `angular` first, then packages starting with a character
+            ['^@angular(/.*)?$', '^[a-z]'],
+            // Packages starting with `@`
+            ['^@'],
+            // Packages starting with `~`
+            ['^~'],
+            // Imports starting with `../`
+            ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+            // Imports starting with `./`
+            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+            // Style imports
+            ['^.+\\.s?css$'],
+            // Side effect imports
+            ['^\\u0000'],
+          ],
+        },
+      ],
       'simple-import-sort/exports': 'error',
     },
   },

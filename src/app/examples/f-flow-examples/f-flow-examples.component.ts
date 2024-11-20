@@ -1,4 +1,5 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+
 import { IPoint, IRect, ISize } from '@foblex/2d';
 import {
   EFConnectionBehavior,

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+
 import { PointExtensions } from '@foblex/2d';
 import { EFResizeHandleType, FCanvasComponent, FFlowModule } from '@foblex/flow';
 

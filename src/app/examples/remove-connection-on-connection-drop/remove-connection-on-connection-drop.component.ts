@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+
 import { IPoint } from '@foblex/2d';
 import { FCanvasComponent, FFlowComponent, FFlowModule, FReassignConnectionEvent } from '@foblex/flow';
 

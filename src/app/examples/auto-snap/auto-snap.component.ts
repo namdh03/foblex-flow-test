@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+
 import { FCanvasComponent, FCreateConnectionEvent, FFlowModule } from '@foblex/flow';
 
 @Component({
