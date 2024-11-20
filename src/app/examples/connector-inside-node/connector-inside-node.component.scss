@@ -1,0 +1,13 @@
+@use './common';
+::ng-deep app-connector-inside-node {
+  @include common.connection;
+}
+.f-node {
+  @include common.node;
+}
+.f-node-input,
+.f-node-output {
+  &:not(.f-node) {
+    @include common.connectors;
+  }
+}

@@ -1,0 +1,18 @@
+@use './common';
+::ng-deep app-remove-connection-on-connection-drop {
+  @include common.connection;
+  .f-connection {
+    .f-connection-drag-handle {
+      fill: var(--connection-color);
+    }
+  }
+}
+.f-node {
+  @include common.node;
+}
+.f-node-input,
+.f-node-output {
+  &:not(.f-node) {
+    @include common.connectors;
+  }
+}

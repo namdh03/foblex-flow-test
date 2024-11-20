@@ -1,0 +1,26 @@
+@use './common';
+::ng-deep app-limiting-connections {
+  @include common.connection;
+  position: relative;
+}
+.f-node {
+  @include common.node;
+  width: 180px;
+}
+.f-node-input,
+.f-node-output {
+  &:not(.f-node) {
+    @include common.connectors;
+  }
+  &.f-node-input-connected,
+  &.f-node-output-connected {
+    background-color: var(--minimap-view-color);
+  }
+  &.f-node-output-not-connectable,
+  &.f-node-input-not-connectable {
+    background-color: var(--disabled-color);
+  }
+}
+.toolbar {
+  @include common.toolbar;
+}

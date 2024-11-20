@@ -1,0 +1,10 @@
+@use './common';
+::ng-deep app-auto-snap {
+  @include common.connection;
+}
+.f-node {
+  @include common.node;
+}
+.toolbar {
+  @include common.toolbar;
+}

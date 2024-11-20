@@ -1,0 +1,29 @@
+@use './common';
+::ng-deep app-connector-outlet {
+  @include common.connection;
+  position: relative;
+}
+.f-node {
+  @include common.node;
+}
+.f-node-input,
+.f-node-output {
+  &:not(.f-node) {
+    @include common.connectors;
+  }
+}
+.f-node-outlet {
+  position: absolute;
+  border: 0.2px solid var(--node-border-color);
+  background-color: var(--node-background-color);
+  top: 50%;
+  right: -90px;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  .mat-icon {
+    display: block;
+  }
+}
+.toolbar {
+  @include common.toolbar;
+}

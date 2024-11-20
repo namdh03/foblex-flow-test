@@ -1,0 +1,7 @@
+@use './common';
+::ng-deep app-node-as-connector {
+  @include common.connection;
+}
+.f-node {
+  @include common.node;
+}

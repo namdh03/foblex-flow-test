@@ -1,0 +1,7 @@
+@use './common';
+::ng-deep app-drag-to-connect {
+  @include common.connection;
+}
+.f-node {
+  @include common.node;
+}

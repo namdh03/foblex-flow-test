@@ -1,0 +1,13 @@
+@use './common';
+::ng-deep app-connectable-side {
+  @include common.connection;
+  position: relative;
+}
+.f-node {
+  position: relative;
+  @include common.node;
+  width: 180px;
+}
+.toolbar {
+  @include common.toolbar;
+}
