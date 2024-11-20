@@ -1,5 +1,5 @@
 @use './common';
-::ng-deep app-dagre-tree {
+::ng-deep app-elkjs-tree {
   @include common.connection;
   position: relative;
 }

@@ -27,6 +27,7 @@
     "@angular/router": "^18.2.0",
     "@dagrejs/dagre": "^1.1.4",
     "@foblex/flow": "^16.0.5",
+    "elkjs": "^0.9.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

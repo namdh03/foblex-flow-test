@@ -15,12 +15,14 @@ import { CreateNodeOnConnectionDropComponent } from '~examples/create-node-on-co
 import { CustomConnectionTypeComponent } from '~examples/custom-connection-type/custom-connection-type.component';
 import { CustomConnectionsComponent } from '~examples/custom-connections/custom-connections.component';
 import { CustomNodesComponent } from '~examples/custom-nodes/custom-nodes.component';
+import { DagreTreeComponent } from '~examples/dagre-tree/dagre-tree.component';
 import { DifferentConnectableSideComponent } from '~examples/different-connectable-side/different-connectable-side.component';
 import { DifferentConnectionBehavioursComponent } from '~examples/different-connection-behaviours/different-connection-behaviours.component';
 import { DifferentConnectionTypesComponent } from '~examples/different-connection-types/different-connection-types.component';
 import { DragHandleComponent } from '~examples/drag-handle/drag-handle.component';
 import { DragToConnectComponent } from '~examples/drag-to-connect/drag-to-connect.component';
 import { DragToReassignComponent } from '~examples/drag-to-reassign/drag-to-reassign.component';
+import { ELKJSTreeComponent } from '~examples/elkjs-tree/elkjs-tree.component';
 import { FFlowExamplesComponent } from '~examples/f-flow-examples/f-flow-examples.component';
 import { GettingStartedComponent } from '~examples/getting-started/getting-started.component';
 import { GroupingComponent } from '~examples/grouping/grouping.component';
@@ -71,6 +73,8 @@ import { ResizeHandleComponent } from '~examples/resize-handle/resize-handle.com
     ConnectionBehavioursComponent,
     ConnectionMarkersComponent,
     CustomConnectionsComponent,
+    DagreTreeComponent,
+    ELKJSTreeComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

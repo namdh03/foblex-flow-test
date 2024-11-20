@@ -1,6 +1,7 @@
 @use './common';
 ::ng-deep app-auto-snap {
   @include common.connection;
+  position: relative;
 }
 .f-node {
   @include common.node;
