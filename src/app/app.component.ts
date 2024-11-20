@@ -39,6 +39,7 @@ import { ReassignConnectionComponent } from '~examples/reassign-connection/reass
 import { RemoveConnectionOnConnectionDropComponent } from '~examples/remove-connection-on-connection-drop/remove-connection-on-connection-drop.component';
 import { ResizeHandleComponent } from '~examples/resize-handle/resize-handle.component';
 import { SelectionAreaComponent } from '~examples/selection-area/selection-area.component';
+import { TournamentBracketComponent } from '~examples/tournament-bracket/tournament-bracket.component';
 import { UmlDiagramComponent } from '~examples/uml-diagram/uml-diagram.component';
 import { ZoomComponent } from '~examples/zoom/zoom.component';
 
@@ -87,6 +88,7 @@ import { ZoomComponent } from '~examples/zoom/zoom.component';
     ZoomComponent,
     BackgroundComponent,
     UmlDiagramComponent,
+    TournamentBracketComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
