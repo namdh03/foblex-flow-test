@@ -1,0 +1,8 @@
+@use './common';
+::ng-deep app-help-in-positioning {
+  @include common.connection;
+  @include common.line-alignment;
+}
+.f-node {
+  @include common.node;
+}

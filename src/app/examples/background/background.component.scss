@@ -1,0 +1,12 @@
+@use './common';
+::ng-deep app-background {
+  @include common.connection;
+  @include common.background;
+  position: relative;
+}
+.f-node {
+  @include common.node;
+}
+.toolbar {
+  @include common.toolbar;
+}

@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 
 import { AddingDraggingFunctionalityComponent } from '~examples/adding-dragging-functionality/adding-dragging-functionality.component';
 import { AutoSnapComponent } from '~examples/auto-snap/auto-snap.component';
+import { BackgroundComponent } from '~examples/background/background.component';
 import { BasicExampleComponent } from '~examples/basic-example/basic-example.component';
 import { ConnectableSideComponent } from '~examples/connectable-side/connectable-side.component';
 import { ConnectionBehavioursComponent } from '~examples/connection-behaviours/connection-behaviours.component';
@@ -26,7 +27,9 @@ import { ELKJSTreeComponent } from '~examples/elkjs-tree/elkjs-tree.component';
 import { FFlowExamplesComponent } from '~examples/f-flow-examples/f-flow-examples.component';
 import { GettingStartedComponent } from '~examples/getting-started/getting-started.component';
 import { GroupingComponent } from '~examples/grouping/grouping.component';
+import { HelpInPositioningComponent } from '~examples/help-in-positioning/help-in-positioning.component';
 import { LimitingConnectionsComponent } from '~examples/limiting-connections/limiting-connections.component';
+import { MinimapComponent } from '~examples/minimap/minimap.component';
 import { NodeAsConnectorComponent } from '~examples/node-as-connector/node-as-connector.component';
 import { NodeSelectionComponent } from '~examples/node-selection/node-selection.component';
 import { NodeWithConnectorsComponent } from '~examples/node-with-connectors/node-with-connectors.component';
@@ -35,6 +38,8 @@ import { NodeWithPositionComponent } from '~examples/node-with-position/node-wit
 import { ReassignConnectionComponent } from '~examples/reassign-connection/reassign-connection.component';
 import { RemoveConnectionOnConnectionDropComponent } from '~examples/remove-connection-on-connection-drop/remove-connection-on-connection-drop.component';
 import { ResizeHandleComponent } from '~examples/resize-handle/resize-handle.component';
+import { SelectionAreaComponent } from '~examples/selection-area/selection-area.component';
+import { ZoomComponent } from '~examples/zoom/zoom.component';
 
 @Component({
   selector: 'app-root',
@@ -75,6 +80,11 @@ import { ResizeHandleComponent } from '~examples/resize-handle/resize-handle.com
     CustomConnectionsComponent,
     DagreTreeComponent,
     ELKJSTreeComponent,
+    SelectionAreaComponent,
+    HelpInPositioningComponent,
+    MinimapComponent,
+    ZoomComponent,
+    BackgroundComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,0 +1,11 @@
+@use './common';
+::ng-deep app-minimap {
+  @include common.connection;
+  @include common.minimap;
+}
+.f-node {
+  @include common.node;
+}
+.f-flow {
+  background-color: #f6f6f7;
+}

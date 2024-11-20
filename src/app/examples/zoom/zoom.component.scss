@@ -1,0 +1,11 @@
+@use './common';
+::ng-deep app-zoom {
+  @include common.connection;
+  position: relative;
+}
+.f-node {
+  @include common.node;
+}
+.toolbar {
+  @include common.toolbar;
+}
